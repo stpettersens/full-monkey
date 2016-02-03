@@ -23,7 +23,7 @@ fn preprocess(input: &str, output: &str, conditions: &str, verbose: bool) {
     let mut prefixes: Vec<String> = Vec::new();
     let mut in_pp = false;
 
-    let conditions = conditions.split(";");
+    let conditions = conditions.split(",");
     for sc in conditions {
         set_conds.push(sc.to_string());
     }

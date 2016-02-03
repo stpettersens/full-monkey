@@ -38,8 +38,7 @@ fn preprocess(input: &str, output: &str, conditions: &str, verbose: bool) {
         if p.is_match(&l) {
             for cap in p.captures_iter(&l) {
                 prefixed.push(cap.at(1).unwrap().to_string());
-                prefixes.push(cap.at(2).unwrap().to_string());
-               
+                prefixes.push(cap.at(2).unwrap().to_string());   
             }
             continue;
         }

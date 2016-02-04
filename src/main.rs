@@ -42,6 +42,7 @@ fn preprocess(input: &str, output: &str, conditions: &str, verbose: bool) {
             }
             continue;
         }
+        
         // Process conditional (if/else/elseif)...
         p = Regex::new("#[else]*[if]* (.*)").unwrap();
         if p.is_match(&l) {
@@ -119,9 +120,9 @@ fn display_usage(program: &str, exit_code: i32) {
     println!("\n-f|--file: File to run preprocessing on.");
     println!("-c|--conditon: Comma delimited list of conditon(s) to apply.");
     println!("-o|--out: File to output preprocessed LoC to.");
-    println!("-l|--verbose: Display output to console on process.");
+    println!("-l|--verbose: Display message to console on process.");
     println!("-h|--help: Display this help information and exit.");
-    println!("-v|--version: Display program versiona and exit.");
+    println!("-v|--version: Display program version and exit.");
     exit(exit_code);
 }
 
